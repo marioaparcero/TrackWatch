@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 const { ActionRowBuilder, ButtonBuilder, SlashCommandBuilder } = require('discord.js');
 const { OverShop } = require('../lib/overshop.js');
 

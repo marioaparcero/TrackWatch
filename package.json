@@ -9,7 +9,6 @@
   "dependencies": {
     "discord.js": "^14.7.1",
     "node-cron": "^3.0.2",
-    "node-html-parser": "^6.1.4",
     "sequelize": "^6.28.0",
     "sqlite3": "^5.1.4"
   },

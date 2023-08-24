@@ -5,6 +5,9 @@ const Cron = require('node-cron');
 
 const { osdb } = require('./db/overshop.js');
 const { opdb } = require('./db/overpatch.js');
+const { lgdb } = require('./db/leagueshop.js');
+
+const { LeagueShopCron } = require('./lib/leagueshop.js');
 const { OverShopCron } = require('./lib/overshop.js');
 const { OverPatchCron } = require('./lib/overpatch.js');
 
@@ -74,17 +77,22 @@ for (const file of fs.readdirSync('./commands').filter(file => file.endsWith('.j
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, async (c) => {
-  // initialize db
-  await osdb.init();
-  await opdb.init();
+    // initialize db
+    await osdb.init();
+    await opdb.init();
+    await lgdb.init();
 
-  Cron.schedule('0-59/3 20 * * 2', async () => {
-    await OverShopCron(c);
-  });
+    Cron.schedule('0-59/3 20 * * 2', async () => {
+        await OverShopCron(c);
+    });
 
-  Cron.schedule('1-4 * * * *', async () => {
-    await OverPatchCron(c);
-  });
+    Cron.schedule('0-59/3 20 * * 2', async () => {
+        await LeagueShopCron(c);
+    });
+
+    Cron.schedule('1-4 * * * *', async () => {
+        await OverPatchCron(c);
+    });
 
   console.log(`[Discord] Logged in as ${c.user.tag}`);
 });

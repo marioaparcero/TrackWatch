@@ -1,5 +1,5 @@
 const { ActionRowBuilder, ButtonBuilder, SlashCommandBuilder } = require('discord.js');
-const { LeagueShop } = require('../lib/leagueshop.js');
+const { LeagueShop } = require('../lib/overwatch/leagueshop.js');
 
 module.exports = {
   data: new SlashCommandBuilder()

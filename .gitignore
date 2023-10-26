@@ -42,4 +42,5 @@ docs
 
 # Custom
 config.json
+database.db
 db.sqlite

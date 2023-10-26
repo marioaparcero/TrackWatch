@@ -2,6 +2,9 @@
   "token": "YOUR_DISCORD_BOT_TOKEN",
   "clientId": "DISCORD_BOT_CLIENT",
   "guildId": "DISCORD_SERVER_ID",
-  "shopchannel": "DISCORD_CHANNEL_SHOP",
-  "patchchannel": "DISCORD_CHANNEL_PATCH"
+  "overwatch": {
+    "shopchannel": "DISCORD_CHANNEL_ID_SHOP",
+    "patchchannel": "DISCORD_CHANNEL_ID_PATCH"
+  },
+  "language": "ko-kr"
 }

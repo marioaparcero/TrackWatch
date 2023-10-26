@@ -3,13 +3,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const Cron = require('node-cron');
 
-const { osdb } = require('./db/overshop.js');
-const { opdb } = require('./db/overpatch.js');
-const { lgdb } = require('./db/leagueshop.js');
+const { sequelize } = require('./lib/model');
 
-const { LeagueShopCron } = require('./lib/leagueshop.js');
-const { OverShopCron } = require('./lib/overshop.js');
-const { OverPatchCron } = require('./lib/overpatch.js');
+const { LeagueShopCron } = require('./lib/overwatch/leagueshop.js');
+const { OverShopCron } = require('./lib/overwatch/overshop.js');
+const { OverPatchCron } = require('./lib/overwatch/overpatch.js');
 
 // Config
 const { token, clientId, guildId } = require("./config.json");
@@ -78,15 +76,17 @@ for (const file of fs.readdirSync('./commands').filter(file => file.endsWith('.j
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, async (c) => {
     // initialize db
-    await osdb.init();
-    await opdb.init();
-    await lgdb.init();
+    await sequelize.sync({ force: false })
+      .then(() => {
+        console.log('[DB] Connected to Database');
+      })
+      .catch((e) => {
+        console.log('[DB] Failed to connect');
+        console.error(e.message);
+      });
 
-    Cron.schedule('0-59/3 20 * * 2', async () => {
+    Cron.schedule('0-59/3 19-20 * * 2,4', async () => {
         await OverShopCron(c);
-    });
-
-    Cron.schedule('0-59/3 20 * * 2', async () => {
         await LeagueShopCron(c);
     });
 

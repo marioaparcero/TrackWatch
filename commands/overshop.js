@@ -3,42 +3,42 @@ const { OverShop } = require('../lib/overwatch/overshop.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('상점')
-    .setDescription('오버워치 2의 상점을 보여줍니다'),
+    .setName('tienda')
+    .setDescription('Tienda de cosméticos de Overwatch 2'),
   async execute(interaction) {
     const result = await OverShop();
 
-    if (!result) return await interaction.reply({ content: "데이터를 불러오는 중에 오류가 발생했습니다.", ephemeral: true });
+    if (!result) return await interaction.reply({ content: "Se produjo un error al cargar datos.", ephemeral: true });
 
     try {
       // Embed
       const embed = {
         color: 0xfb923c,
-        title: `오버워치 2 상점 정보`,
+        title: `Información de la tienda de Overwatch 2`,
         fields: [
           {
-            name: "추천",
+            name: "Sugerencia",
             value: result.items,
           },
           {
-            name: "시즌 팩",
+            name: "Paquete de temporada",
             value: result.season,
           }
         ]
       };
 
-      // Links
+      // Enlaces
       const row = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-          .setLabel('오버워치 2 상점으로 이동')
+          .setLabel('Ir a la tienda de Overwatch 2')
           .setStyle('Link')
-          .setURL('https://kr.shop.battle.net/ko-kr/family/overwatch'),
+          .setURL('https://eu.shop.battle.net/es-es/family/overwatch'),
         );
 
       await interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
     }
     catch (err) {
-      await interaction.reply({ content: '오류가 발생했습니다. 잠시후 다시 시도해주세요', ephemeral: true });
+      await interaction.reply({ content: 'Se ha producido un error. Inténtalo de nuevo en unos minutos.', ephemeral: true });
     }
   },
 };

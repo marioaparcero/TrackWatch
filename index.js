@@ -5,7 +5,7 @@ const Cron = require('node-cron');
 
 const { sequelize } = require('./lib/model');
 
-const { LeagueShopCron } = require('./lib/overwatch/leagueshop.js');
+//const { LeagueShopCron } = require('./lib/overwatch/leagueshop.js');
 const { OverShopCron } = require('./lib/overwatch/overshop.js');
 const { OverPatchCron } = require('./lib/overwatch/overpatch.js');
 
@@ -85,12 +85,12 @@ client.once(Events.ClientReady, async (c) => {
         console.error(e.message);
       });
 
-    Cron.schedule('0-59/3 19-20 * * 2,4', async () => {
+    Cron.schedule('0-59/3 19-20 * * 2,4', async () => { // Every 3 minutes from 7-8 PM on Tuesday and Thursday
         await OverShopCron(c);
-        await LeagueShopCron(c);
+        //await LeagueShopCron(c);
     });
 
-    Cron.schedule('1-4 * * * *', async () => {
+    Cron.schedule('1-4 * * * *', async () => { // Every 1-4 minutes. For each two minutes is '*/2'. For 30 seconds is '*/0,5 * * * *'
         await OverPatchCron(c);
     });
 

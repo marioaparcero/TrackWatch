@@ -1,17 +1,78 @@
 # TrackWatch
-오버워치 2의 패치 노트와 상점 정보를 가져오는 디스코드 봇입니다
+Este es un bot de Discord que recupera las notas del parche y la información de la tienda de Overwatch 2.
 
-## 기능
-* 오버워치 2 상점 정보 데이터 가져오기
-* 오버워치 리그 상점 정보 데이터 가져오기
-* 오버워치 2 패치 노트 업데이트 자동 확인
+## Funciones
+Obtener datos de la tienda de Overwatch 2.
+Obtener datos de la tienda de la Liga Overwatch.
+Verificar automáticamente las actualizaciones de las notas del parche de Overwatch 2.
+## Uso
+Primero, cambie el nombre del archivo de configuración a `config.json` y ábralo para modificar cada entrada según corresponda. Las entradas son las siguientes:
 
-## 사용법
-먼저 설정 파일의 이름을 `config.json`으로 바꾸시고, 설정 파일을 열어서 각 항목에 맞게 수정해 주시면 됩니다. 항목은 다음과 같습니다
-* token - 디스코드 봇의 토큰 값
-* clientId - 디스코드 봇의 클라이언트 ID 값
-* guildId - 디스코드 서버의 ID 값
-* shopchannel - 상점 정보의 메시지를 보낼 채널의 ID 값
-* patchchannel - 패치 노트 정보의 메시지를 보낼 채널의 ID 값
+* token - Valor del token del bot de Discord.
+* clientId - Valor del ID del cliente del bot de Discord.
+* guildId - Valor del ID del servidor de Discord.
+* shopchannel - Valor del ID del canal donde se enviarán los mensajes de información de la tienda.
+* patchchannel - Valor del ID del canal donde se enviarán los mensajes de información de las notas del parche.
+Después de eso, simplemente ejecute el comando `node index.js` y estará listo.
 
-그 후 이제 `node index.js` 명령어로 실행하면 완료됩니다
+# Próximamente
+- [ ] Añadir soporte para la tienda de la Liga Overwatch.
+- [ ] Nuevo formato para la plantilla de las noticias de Overwatch.
+
+# Ejemplo de plantilla de noticias de héroes de Overwatch
+
+### ACTUALIZACIONES DE HÉROES
+**TANQUE 🛡️**
+🐰 **D.Va**
+Pistola de luz
+- Se ha reducido el tamaño base de los proyectiles de 0,25 a 0,2 metros. Ahora el tamaño en total de los proyectiles es de 0,3 metros.    
+
+🐷 **Roadhog**
+Inhalador
+- Se ha aumentado la reducción de daño del 40 al 50 %.
+
+💪 **Zarya**
+Cañón de partículas
+- Se ha aumentado el daño mínimo del disparo principal de 85 a 95 por segundo.
+- Se ha aumentado el daño máximo del disparo principal de 170 a 190 por segundo.
+
+**DAÑO ⚔️**
+🏹 **Hanzo**
+- Se ha reducido el tamaño base de los proyectiles de 0,1 a 0,075 metros. Ahora el tamaño en total de los proyectiles es de 0,175 metros. 
+
+💣 **Junkrat**
+Mina de conmoción
+- Se ha reducido el tiempo de reutilización de 8 s a 7 s.
+- Se ha aumentado el daño máximo de 110 a 120.
+- Se ha aumentado el daño mínimo de 20 a 55.
+--------------------------------------------------------------
+# Ejemplo de plantilla de noticias de Overwatch
+
+20 DE FEBRERO DE 2024
+# NOTAS DEL PARCHE DE OVERWATCH 2: 21 DE FEBRERO DE 2024
+## ACTUALIZACIONES DE HÉROES
+**TANQUE**
+D.VA
+Pistola de luz
+Se redujo el tamaño del proyectil base de 0.25 a 0.2 metros. El tamaño total del proyectil ahora es de 0.3 metros.
+**DAÑO**
+HANZO
+Se redujo el tamaño de los proyectiles base de 0.1 a 0.075 metros. El tamaño total del proyectil ahora es de 0.175 metros.
+**APOYO**
+ILLARI
+Torre de sanación
+• Se redujo el tiempo de reutilización de 8 a 6 segundos. • Se redujo el tiempo de reutilización cuando la destruye el enemigo de 15 a 12 segundos.
+Sol cautivo
+Se aumentó el daño de explosión de Insolación de 100 a 160.
+El daño de Insolación vuelve a tener la mecánica de declive de daño, que puede reducir el daño hasta un 25%.
+ 
+- y luego se añadiría un índice -
+# TE DAMOS LA BIENVENIDA A LA TEMPORADA 9: CAMPEONES
+- NUEVO EVENTO: CRISIS CÓSMICA
+- ACTUALIZACIONES DE JUEGO COMPETITIVO
+ - Restablecimiento de rangos de habilidad
+ - Partidas de colocación
+ - etc
+- ACTUALIZACIONES GLOBALES
+  - PROGRESIÓN DE JUGADORES 
+- ACTUALIZACIONES DE HÉROES

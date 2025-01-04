@@ -14,14 +14,14 @@ module.exports = {
       // Embed
       const embed = {
         color: 0xfb923c,
-        title: `Información de la tienda de Overwatch 2`,
+        title: `Información de la tienda de Overwatch 2 <:overwatch:735558639603155027>`,
         fields: [
           {
-            name: "Sugerencia",
+            name: "<:decision:973254562154709112> Destacado", //Sugerencia
             value: result.items,
           },
           {
-            name: "Paquete de temporada",
+            name: "<:afirmativo:991399660990255125> Paquete de temporada",
             value: result.season,
           }
         ]

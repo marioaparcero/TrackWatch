@@ -1,11 +1,11 @@
 // Initialize
 const fs = require('node:fs');
-const path = require('node:path');
+// const path = require('node:path');
 const Cron = require('node-cron');
 
 const { sequelize } = require('./lib/model');
 
-//const { LeagueShopCron } = require('./lib/overwatch/leagueshop.js');
+// const { LeagueShopCron } = require('./lib/overwatch/leagueshop.js');
 const { OverShopCron } = require('./lib/overwatch/overshop.js');
 const { OverPatchCron } = require('./lib/overwatch/overpatch.js');
 
@@ -41,7 +41,9 @@ client.on(Events.InteractionCreate, async interaction => {
     await command.execute(interaction);
   } catch (error) {
     console.error(error);
-    await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+    // await interaction.deferReply(); // Esto asegura que Discord sabe que está en progreso
+    // await interaction.editReply({ content: '¡Hubo un error al ejecutar este comando!', ephemeral: true }); // Editar la respuesta cuando esté lista
+    await interaction.reply({ content: '¡Hubo un error al ejecutar este comando!', ephemeral: true });
   }
 });
 
@@ -87,10 +89,10 @@ client.once(Events.ClientReady, async (c) => {
 
     Cron.schedule('0-59/3 19-20 * * 2,4', async () => { // Every 3 minutes from 7-8 PM on Tuesday and Thursday
         await OverShopCron(c);
-        //await LeagueShopCron(c);
+        // await LeagueShopCron(c);
     });
 
-    Cron.schedule('1-4 * * * *', async () => { // Every 1-4 minutes. For each two minutes is '*/2'. For 30 seconds is '*/0,5 * * * *'
+    Cron.schedule('5 * * * *', async () => { // Every 1-4 minutes. For each two minutes is '*/2'. For 30 seconds is '*/0,5 * * * *'
         await OverPatchCron(c);
     });
 

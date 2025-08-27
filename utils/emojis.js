@@ -6,6 +6,7 @@ const emojis = {
     'Hanzo': '<:hanzo:817773638647676928>',
     'Junkrat': '<:junkrat:735555216363094098>',
     'Soldado: 76': '<:soldado76:735555717234294865>',
+    'Soldier: 76': '<:soldado76:735555717234294865>',
     'Tracer': '<:tracer:817776337234165790>',
     'Widowmaker': '<:widowmaker:735555840169345136>',
     'Illari': '<:illari:1141824878979321906>',

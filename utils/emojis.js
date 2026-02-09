@@ -11,11 +11,13 @@ const emojis = {
     'Widowmaker': '<:widowmaker:735555840169345136>',
     'Illari': '<:illari:1141824878979321906>',
     'Lúcio': '<:lucio:817777930531897346>',
+    'Lucio': '<:lucio:817777930531897346>',
     'Mercy': '<:mercy:735555360668254256>',
     'Wuyang': '<:wuyang:1405664483120250941>',
     'Zenyatta': '<:zenyatta:817778858652598272>',
     'Doomfist': '<:doomfist:735555778647293972>',
     'Junker Queen': '<:junkerqueen:1031737097809305621>',
+    'Junkerqueen': '<:junkerqueen:1031737097809305621>',
     'Mauga': '<:mauga:1209910728270544926>',
     'Orisa': '<:orisa:735555395610738792>',
     'Ramattra': '<:ramattra:1055912552976105502>',
@@ -43,6 +45,7 @@ const emojis = {
     'Lifeweaver': '<:lifeweaver:1117145455390892134>',
     'Moira': '<:moira:735555820749717657>',
     'Juno': '<:juno:1267575692288327702>',
+    'Vendetta': '<:vendetta:1449067095282286734>',
     'Venture': '<:venture:1235319765950664845>',
     'Hazard': '<:hazard:1322282245884739695>'
 };

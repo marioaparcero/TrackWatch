@@ -1,5 +1,10 @@
 // Objeto que mapea los nombres de los héroes a sus emojis correspondientes
 const emojis = {
+    'Domina': '<:domina:1470878591100125205>',
+    'Anran': '<:anran:1470878534334677093>',
+    'Emre': '<:emre:1470878619416002866>',
+    'Jetpack Cat': '<:jetpackcat:1470878648113434646>',
+    'Mizuki': '<:mizuki:1470878820621090849>',
     'D.Va': '<:dva:735555762734104726>',
     'Roadhog': '<:roadhog:735555506940412044>',
     'Zarya': '<:zarya:735555560245559347>',

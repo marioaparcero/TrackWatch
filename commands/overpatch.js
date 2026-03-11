@@ -5,7 +5,7 @@ const { OverPatch } = require('../lib/overwatch/overpatch.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('parche')
-        .setDescription('Notas del parche más reciente de Overwatch 2'),
+        .setDescription('Notas del parche más reciente de Overwatch'),
     async execute(interaction) {
         try {
             await interaction.deferReply();
@@ -111,12 +111,12 @@ module.exports = {
                     // Si es el primer embed, agregar el autor y el título
                     if (isFirstEmbed) {
                         embed.author = {
-                            name: 'Overwatch 2',
+                            name: 'Overwatch',
                             icon_url: 'https://images-ext-1.discordapp.net/external/tTKzALJXJSHXWduLkHt9hT_d_obdeFHQ_cyx5-EpIQ8/https/cdn.patchbot.io/games/106/overwatch_2_sm.webp?format=webp&width=312&height=312',
                             url: 'https://playoverwatch.com/es-es/news/patch-notes/live'
                         };
                         embed.url = result.patchUrl;
-                        embed.title = `📝 ${result.date || 'Notas del parche de Overwatch 2'}`;
+                        embed.title = `📝 ${result.date || 'Notas del parche de Overwatch'}`;
                         // embed.timestamp = new Date().toISOString();
 
                         // Enviar como respuesta inicial
@@ -176,12 +176,12 @@ module.exports = {
 
                 const embed = {
                     author: {
-                        name: 'Overwatch 2',
+                        name: 'Overwatch',
                         icon_url: 'https://images-ext-1.discordapp.net/external/tTKzALJXJSHXWduLkHt9hT_d_obdeFHQ_cyx5-EpIQ8/https/cdn.patchbot.io/games/106/overwatch_2_sm.webp?format=webp&width=312&height=312',
                         url: 'https://playoverwatch.com/es-es/news/patch-notes/live'
                     },
                     color: 0xffffff,
-                    title: `📝 ${result.date || 'Notas del parche de Overwatch 2'}`,
+                    title: `📝 ${result.date || 'Notas del parche de Overwatch'}`,
                     description: 'No se encontraron notas del parche. Consulta el enlace para más información.',
                     url: result.patchUrl,
                     timestamp: new Date().toISOString()

@@ -1,10 +1,10 @@
 # TrackWatch
-Este es un bot de Discord que recupera las notas del parche y la información de la tienda de Overwatch 2.
+Este es un bot de Discord que recupera las notas del parche y la información de la tienda de Overwatch.
 
 ## Funciones
-Obtener datos de la tienda de Overwatch 2.
+Obtener datos de la tienda de Overwatch.
 Obtener datos de la tienda de la Liga Overwatch.
-Verificar automáticamente las actualizaciones de las notas del parche de Overwatch 2.
+Verificar automáticamente las actualizaciones de las notas del parche de Overwatch.
 ## Uso
 Primero, cambie el nombre del archivo de configuración a `config.json` y ábralo para modificar cada entrada según corresponda. Las entradas son las siguientes:
 
@@ -48,8 +48,8 @@ Mina de conmoción
 --------------------------------------------------------------
 # Ejemplo de plantilla de noticias de Overwatch
 
-20 DE FEBRERO DE 2024
-# NOTAS DEL PARCHE DE OVERWATCH 2: 21 DE FEBRERO DE 2024
+10 DE MARZO DE 2026
+# NOTAS DEL PARCHE DE OVERWATCH: 10 DE MARZO DE 2026
 ## ACTUALIZACIONES DE HÉROES
 **TANQUE**
 D.VA

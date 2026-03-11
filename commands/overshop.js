@@ -5,7 +5,7 @@ const { formatHeroes } = require("../utils/emojis");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('tienda')
-    .setDescription('Tienda de cosméticos de Overwatch 2'),
+    .setDescription('Tienda de cosméticos de Overwatch'),
   async execute(interaction) {
     const result = await OverShop();
 
@@ -16,7 +16,7 @@ module.exports = {
       // Embed
       const embed = {
         color: 0xfb923c,
-        title: `Información de la tienda de Overwatch 2 <:overwatch:735558639603155027>`,
+        title: `Información de la tienda de Overwatch <:overwatch:735558639603155027>`,
         fields: [
           {
             name: "<:decision:973254562154709112> Destacado", // Sugerencia
@@ -33,7 +33,7 @@ module.exports = {
       // Enlaces
       const row = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-          .setLabel('Ir a la tienda de Overwatch 2')
+          .setLabel('Ir a la tienda de Overwatch')
           .setStyle('Link')
           .setURL('https://eu.shop.battle.net/es-es/family/overwatch'),
       );

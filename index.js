@@ -92,7 +92,7 @@ client.once(Events.ClientReady, async (c) => {
         // await LeagueShopCron(c);
     });
 
-    Cron.schedule('5 * * * *', async () => { // Every 1-4 minutes. For each two minutes is '*/2'. For 30 seconds is '*/0,5 * * * *'
+    Cron.schedule('10 * * * *', async () => { // Every 1-4 minutes. For each two minutes is '*/2'. For 30 seconds is '*/0,5 * * * *'
         await OverPatchCron(c);
     });
 

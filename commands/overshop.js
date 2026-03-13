@@ -43,8 +43,14 @@ module.exports = {
       // Crear el Embed usando EmbedBuilder (más robusto)
       const embed = new EmbedBuilder()
         .setColor(0xfb923c)
-        .setTitle(`Información de la tienda de Overwatch <:overwatch:735558639603155027>`)
-        .setTimestamp();
+        .setTitle(`Tienda de Overwatch <:overwatch:735558639603155027>`)
+        .setAuthor({
+          name: 'Overwatch',
+          iconURL: 'https://images-ext-1.discordapp.net/external/4FuuxocaKy80RYDS27BxMgI_2KnunfafT0XMziE4vLY/https/cdn.patchbot.io/games/106/overwatch-2_1770906990_sm.webp?format=webp&width=240&height=240',
+          url: 'https://eu.shop.battle.net/es-es/family/overwatch'
+        })
+        // .setFooter({ text: 'Datos obtenidos de la API oficial de Blizzard' })
+        // .setTimestamp();
 
       // Añadimos los items destacados (repartidos en campos si son muchos)
       itemChunks.forEach((chunk, index) => {

@@ -112,7 +112,7 @@ module.exports = {
                     if (isFirstEmbed) {
                         embed.author = {
                             name: 'Overwatch',
-                            icon_url: 'https://images-ext-1.discordapp.net/external/tTKzALJXJSHXWduLkHt9hT_d_obdeFHQ_cyx5-EpIQ8/https/cdn.patchbot.io/games/106/overwatch_2_sm.webp?format=webp&width=312&height=312',
+                            icon_url: 'https://images-ext-1.discordapp.net/external/4FuuxocaKy80RYDS27BxMgI_2KnunfafT0XMziE4vLY/https/cdn.patchbot.io/games/106/overwatch-2_1770906990_sm.webp?format=webp&width=240&height=240',
                             url: 'https://playoverwatch.com/es-es/news/patch-notes/live'
                         };
                         embed.url = result.patchUrl;
@@ -177,7 +177,7 @@ module.exports = {
                 const embed = {
                     author: {
                         name: 'Overwatch',
-                        icon_url: 'https://images-ext-1.discordapp.net/external/tTKzALJXJSHXWduLkHt9hT_d_obdeFHQ_cyx5-EpIQ8/https/cdn.patchbot.io/games/106/overwatch_2_sm.webp?format=webp&width=312&height=312',
+                        icon_url: 'https://images-ext-1.discordapp.net/external/4FuuxocaKy80RYDS27BxMgI_2KnunfafT0XMziE4vLY/https/cdn.patchbot.io/games/106/overwatch-2_1770906990_sm.webp?format=webp&width=240&height=240',
                         url: 'https://playoverwatch.com/es-es/news/patch-notes/live'
                     },
                     color: 0xffffff,

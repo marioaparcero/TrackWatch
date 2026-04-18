@@ -28,6 +28,7 @@ const emojis = {
     'Ramattra': '<:ramattra:1055912552976105502>',
     'Reinhardt': '<:reinhardt:735555523684073612>',
     'Sigma': '<:sigma:991400349145501786>',
+    'Sierra': '<:sierra:1495069738697625820>',
     'Winston': '<:winston:735555573646622842>',
     'Wrecking Ball': '<:wreckingball:735555646602084362>',
     'Ashe': '<:ashe:817774431731581018>',

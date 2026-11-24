@@ -18,5 +18,8 @@
   },
   "directories": {
     "lib": "lib"
+  },
+  "allowScripts": {
+    "sqlite3@5.1.7": true
   }
 }
